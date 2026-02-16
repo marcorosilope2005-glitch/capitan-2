@@ -1,0 +1,429 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #222;
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1e7bd6;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.6;
+}
+
+/* BOTON RESERVAR NAV */
+.nav-button {
+    background-color: #1e7bd6;
+    color: white !important;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+.nav-button:hover {
+    background-color: #1562ad;
+    opacity: 1;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background-image: url("./imagenes/1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white;
+    margin-top: 90px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+/* BOTÓN HERO */
+.btn-primary {
+    background-color: #1e7bd6;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #145c70;
+    transform: translateY(-3px);
+}
+
+/* CALL BUTTON */
+.call-button {
+    display: inline-block;
+    margin-top: 30px;
+    background-color: #1e7bd6;
+    color: white;
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
+}
+
+.call-button:hover {
+    background-color: #1562ad;
+    transform: translateY(-3px);
+}
+
+/* SECTIONS */
+.section {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.section p {
+    max-width: 700px;
+    margin: auto;
+}
+
+.dark {
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* GRID */
+.grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    width: 280px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* FOOTER */
+footer {
+    padding: 30px;
+    background-color: #111;
+    color: white;
+    text-align: center;
+}
+
+/* SERVICIOS */
+.services-grid {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.service-item {
+    width: 320px;
+    text-align: center;
+}
+
+.service-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.service-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.service-item p {
+    color: #555;
+}
+
+/* SLIDER MENU */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px;   /* ancho máximo opcional */
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slides img {
+    flex: 0 0 100%;      /* cada imagen ocupa todo el contenedor */
+    width: 100%;
+    height: auto;        /* mantener proporción */
+    object-fit: contain;  /* no cortar la imagen */
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Flechas */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+/* SLIDER RESEÑAS */
+.reviews-slider {
+    position: relative;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.reviews-slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.review-card {
+    flex: 0 0 100%;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.review-card p {
+    margin-bottom: 15px;
+}
+
+/* Flechas reseñas */
+.reviews-prev,
+.reviews-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    cursor: pointer;
+    font-size: 22px;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.reviews-prev { left: 10px; }
+.reviews-next { right: 10px; }
+
+.reviews-prev:hover,
+.reviews-next:hover {
+    background: rgba(0,0,0,0.8);
+}
+/* Sección Nuestros Servicios */
+.servicios {
+    background-color: #165797; /* azul */
+    color: rgb(255, 255, 255); /* para que el texto se vea sobre azul */
+}
+
+.servicios h2,
+.servicios p {
+    color: white;
+}
+
+/* Opcional: tarjetas de servicios más legibles sobre el azul */
+.services-grid .service-item {
+    background-color: rgba(255,255,255,0.1); /* semi-transparente */
+    border-radius: 15px;
+    padding: 15px;
+}
+/* SECCIÓN INSTALACIONES AZUL */
+.instalaciones {
+    padding: 80px 0;
+    background-color: #165797;  /* azul igual que servicios */
+    color: white;
+    text-align: center;
+}
+
+.instalaciones h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.instalaciones img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;  /* mantiene toda la imagen visible */
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+}
+/* CUADROS DE RESEÑAS AZUL */
+.review-card {
+    background-color: #165797;  /* azul */
+    color: white;               /* texto blanco */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.review-card p,
+.review-card span {
+    color: white; /* asegúrate que todo el texto se vea blanco */
+}
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* HERO */
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    /* SECCIONES */
+    .section {
+        padding: 70px 20px;
+    }
+
+    /* SERVICIOS */
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    /* SLIDER */
+    .slider {
+        max-width: 100%;
+    }
+
+    /* RESEÑAS */
+    .review-card {
+        padding: 25px;
+    }
+
+}
